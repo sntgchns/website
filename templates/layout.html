@@ -25,6 +25,7 @@
         <a class="navbar-brand" href="{{ '/'|url }}">The Pallets Projects</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
+        <div style="position: absolute; top: 13px; right: 50px; color: white;" id="eyes">Dark</div>
         <ul class="nav navbar-nav">{% for id, item in bag('menu').items() %}
           <li{% if this.is_child_of(item.path) or (item.alt_path and this.is_child_of(item.alt_path)) %} class="active"{% endif %}>
             {% if id == 'donate' %}
