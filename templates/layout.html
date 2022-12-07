@@ -82,4 +82,16 @@
   </footer>
   {% endblock %}
   <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+  <script>
+    function theme() {
+      if (document.getElementById('eyes').innerHTML == 'Dark') {
+          document.querySelector('html').style.filter = 'invert(1)';
+          document.getElementById('eyes').innerHTML = 'Light';
+      } else if (document.getElementById('eyes').innerHTML == 'Light') {
+          document.querySelector('html').style.filter = 'invert(0)';
+          document.getElementById('eyes').innerHTML = 'Dark';
+      }
+    }    
+    document.getElementById('eyes').addEventListener('click', theme)
+  </script>
 </body>
